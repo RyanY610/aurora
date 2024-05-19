@@ -1,0 +1,1 @@
+{"event": "verbose", "uuid": "2487c01e-0b42-4331-943f-549cd3a494f1", "counter": 1, "stdout": "Identity added: /app/ansible/priv_data_dirs/2/artifacts/7781d5c1-90f2-4a16-89e9-c4eb2bb140bf/ssh_key_data (root@debian)", "start_line": 0, "end_line": 1, "runner_ident": "7781d5c1-90f2-4a16-89e9-c4eb2bb140bf"}

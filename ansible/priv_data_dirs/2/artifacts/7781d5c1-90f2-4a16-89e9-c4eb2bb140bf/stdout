@@ -1,0 +1,22 @@
+Identity added: /app/ansible/priv_data_dirs/2/artifacts/7781d5c1-90f2-4a16-89e9-c4eb2bb140bf/ssh_key_data (root@debian)
+
+PLAY [Count bandwidth usage] ***************************************************
+
+TASK [traffic : Sync iptables.sh] **********************************************
+ok: [江苏]
+
+TASK [traffic : Exec iptables script locally to list traffic] ******************
+changed: [江苏]
+
+TASK [traffic : Exec iptables script locally to list rules] ********************
+changed: [江苏]
+
+TASK [traffic : Set traffic result] ********************************************
+ok: [江苏]
+
+TASK [traffic : Set rules result] **********************************************
+ok: [江苏]
+
+PLAY RECAP *********************************************************************
+江苏                         : ok=5    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+

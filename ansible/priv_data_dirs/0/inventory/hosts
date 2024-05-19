@@ -1,0 +1,5 @@
+### START AUTO GENERATION ###
+江苏	ansible_host=36.213.9.64	ansible_port=9999	ansible_user=root
+HKT	ansible_host=5b4b04e4-fcc9-48e8-bba2-95f7802e0468.moonddns.com	ansible_port=22	ansible_user=root
+bwg	ansible_host=199.193.127.197	ansible_port=22	ansible_user=root
+### END AUTO GENERATION ###
