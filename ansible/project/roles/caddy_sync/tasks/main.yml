@@ -1,0 +1,26 @@
+---
+- name: Sync caddy binary
+  copy:
+    src: files/caddy_2.4.5_linux_amd64
+    dest: /usr/local/bin/caddy
+    mode: +x
+    owner: root
+    group: root
+
+- name: Gather facts
+  gather_facts:
+    parallel: yes
+
+- name: Install nss-tools for CentOS
+  when: ansible_facts.os_family == 'RedHat'
+  yum:
+    name: nss-tools
+    state: latest
+    update_cache: yes
+
+- name: Install libnss3-tools for Debian/Ubuntu
+  when: ansible_facts.os_family == 'Debian'
+  apt:
+    name: libnss3-tools
+    state: latest
+    update_cache: yes

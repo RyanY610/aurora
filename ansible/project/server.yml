@@ -1,0 +1,11 @@
+---
+- hosts: "{{ host | default('web') }}"
+  become: yes
+  gather_facts: no
+  roles:
+    - role: server_init
+    - role: services_prepare
+      when: prepare_services is defined and prepare_services
+    - role: scripts_sync
+      when: sync_scripts is defined and sync_scripts
+    - role: get_facts

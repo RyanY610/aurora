@@ -1,0 +1,17 @@
+---
+- name: Check shadowsocks exist
+  block:
+    - name: Get shadowsocks_go version
+      shell: "{{ app_path }}shadowsocks_go -version"
+    - name: Get shadowsocks_go2 version
+      shell: "{{ app_path }}shadowsocks_go2 version 2>&1"
+      register: shadowsocks
+    - name: Set fact for shadowsocks version
+      set_fact:
+        shadowsocks: "{{ shadowsocks.stdout }}"
+        cacheable: yes
+  rescue:
+    - name: Set shadowsocks not exist
+      set_fact:
+        shadowsocks: ""
+        cacheable: yes

@@ -1,0 +1,4 @@
+---
+- name: Exec clean script remotelly
+  script: files/clean.sh
+  register: results

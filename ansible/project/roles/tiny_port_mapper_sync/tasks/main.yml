@@ -1,0 +1,20 @@
+---
+- name: Get architecture
+  shell: uname -m
+  register: arch
+- name: Sync tinyPortMapper binary for X64
+  when: arch.stdout == 'x86_64'
+  copy:
+    src: files/tinymapper_amd64_20200818.0
+    dest: /usr/local/bin/tiny_port_mapper
+    mode: +x
+    owner: root
+    group: root
+- name: Sync tiny_port_mapper binary for ARM64
+  when: arch.stdout == 'aarch64'
+  copy:
+    src: files/tinymapper_arm_20200818.0
+    dest: /usr/local/bin/tiny_port_mapper
+    mode: +x
+    owner: root
+    group: root
